@@ -1,51 +1,78 @@
-📌 AI Based Online Fraud Transaction Detection System
-🔍 Project Overview
+# 📌 AI Based Online Fraud Transaction Detection System
 
-The AI Based Online Fraud Transaction Detection System is a Flask-based web application integrated with Machine Learning and Rule-Based logic to detect fraudulent UPI transactions in real-time.
+---
+
+## 🔍 Project Overview
+
+The **AI Based Online Fraud Transaction Detection System** is a Flask-based web application integrated with Machine Learning and Rule-Based logic to detect fraudulent UPI transactions in real-time.
 
 It classifies transactions into:
 
-✅ Safe Transaction
-⚠️ Suspicious Transaction
-❌ Fraudulent Transaction
+- ✅ Safe Transaction  
+- ⚠️ Suspicious Transaction  
+- ❌ Fraudulent Transaction  
 
 The system enhances financial security using:
 
-Machine Learning prediction model
-Rule-based fraud detection engine
-OTP-based user authentication
-Admin monitoring dashboard
-🚀 Key Features
-👤 User Features
-User registration with OTP verification (Email-based)
-Secure login system
-Real-time fraud prediction
-Transaction input form
-Result classification (Safe / Suspicious / Fraud)
-Password reset via OTP
-🔐 Admin Features
-Admin dashboard
-View all registered users
-View all transactions
-Fraud analytics overview
-Delete users (except admin)
-🤖 AI / ML Features
-Fraud detection using trained ML model
-Rule-based fraud detection logic
-Feature analysis:
-Transaction amount
-Balance changes
-Device change
-Location change
-Hybrid decision system (ML + Rules)
-🛠️ Tech Stack
-Frontend: HTML, CSS
-Backend: Flask (Python)
-Machine Learning: Scikit-learn
-Database: SQLite
-Email Service: Flask-Mail (SMTP Gmail)
-Security: Session management + OTP authentication
-📂 Project Structure
+- Machine Learning prediction model  
+- Rule-based fraud detection engine  
+- OTP-based user authentication  
+- Admin monitoring dashboard  
+
+---
+
+## 🚀 Key Features
+
+---
+
+### 👤 User Features
+
+- User registration with OTP verification (Email-based)
+- Secure login system
+- Real-time fraud prediction
+- Transaction input form
+- Result classification (Safe / Suspicious / Fraud)
+- Password reset via OTP
+
+---
+
+### 🔐 Admin Features
+
+- Admin dashboard
+- View all registered users
+- View all transactions
+- Fraud analytics overview
+- Delete users (except admin)
+
+---
+
+### 🤖 AI / ML Features
+
+- Fraud detection using trained ML model
+- Rule-based fraud detection logic
+- Feature analysis:
+  - Transaction amount
+  - Balance changes
+  - Device change
+  - Location change
+- Hybrid decision system (ML + Rules)
+
+---
+
+## 🛠️ Tech Stack
+
+- Frontend: HTML, CSS  
+- Backend: Flask (Python)  
+- Machine Learning: Scikit-learn  
+- Database: SQLite  
+- Email Service: Flask-Mail (SMTP Gmail)  
+- Security: Session management + OTP authentication  
+
+---
+
+## 📂 Project Structure
+
+```txt
 AiBasedOnlineFraudTransactionDetectionSystem/
 │
 ├── app.py
@@ -122,19 +149,16 @@ Location change
 Output:
 0 → Safe Transaction
 1 → Fraudulent Transaction
-
-Note: The trained model files are stored externally and loaded during runtime.
-
 📊 System Flow
 
-User Login → Enter Transaction → ML Prediction + Rule Engine → Result Display → Store in Database → Admin Monitoring
+User Login → Transaction Input → ML Prediction + Rule Engine → Result Display → Store in Database → Admin Monitoring
 
 🔐 Security Features
 OTP-based email verification
 Password protection in login/register
 Session-based authentication
 Admin-only access control
-Environment variable protection for sensitive data
+Environment variable protection
 📈 Future Improvements
 Cloud deployment (AWS / Render / Railway)
 Real-time fraud alert system
@@ -144,8 +168,8 @@ API-based microservice architecture
 👩‍💻 Author
 
 Rishika Reddy
-AI Based Online Fraud Transaction Detection System
-Domain: Artificial Intelligence / Machine Learning / Web Development
+AI-Based Online Fraud Transaction Detection System
+Domain: Artificial Intelligence / Machine Learning
 
 ⭐ Support
 
