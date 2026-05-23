@@ -1,99 +1,110 @@
-📌 AI-Based Online UPI Fraud Detection System
+📌 AI Based Online Fraud Transaction Detection System
 🔍 Project Overview
 
-This project is an AI + Rule-Based Fraud Detection System built using Flask and Machine Learning.
-It detects whether a UPI transaction is Safe, Suspicious, or Fraudulent using:
+The AI Based Online Fraud Transaction Detection System is a Flask-based web application integrated with Machine Learning and Rule-Based logic to detect fraudulent UPI transactions in real-time.
 
-Machine Learning model prediction
-Rule-based fraud detection logic
-User authentication system with OTP verification
-Admin dashboard for monitoring users and transactions
-🚀 Features
+It classifies transactions into:
+
+✅ Safe Transaction
+⚠️ Suspicious Transaction
+❌ Fraudulent Transaction
+
+The system enhances financial security using:
+
+Machine Learning prediction model
+Rule-based fraud detection engine
+OTP-based user authentication
+Admin monitoring dashboard
+🚀 Key Features
 👤 User Features
 User registration with OTP verification (Email-based)
 Secure login system
-Real-time fraud prediction for transactions
-Transaction history tracking
-Result classification:
-✅ Safe Transaction
-⚠️ Suspicious Transaction
-❌ Fraud Detected
+Real-time fraud prediction
+Transaction input form
+Result classification (Safe / Suspicious / Fraud)
+Password reset via OTP
 🔐 Admin Features
-Admin login system
-View all users
+Admin dashboard
+View all registered users
 View all transactions
-Fraud analytics dashboard
-Delete user (except admin)
-🤖 AI/ML Features
-Fraud prediction using trained ML model (fraud_model.pkl)
-Feature-based input analysis:
+Fraud analytics overview
+Delete users (except admin)
+🤖 AI / ML Features
+Fraud detection using trained ML model
+Rule-based fraud detection logic
+Feature analysis:
 Transaction amount
 Balance changes
 Device change
 Location change
-Hybrid decision system:
-ML Model + Rule-based logic
+Hybrid decision system (ML + Rules)
 🛠️ Tech Stack
 Frontend: HTML, CSS
 Backend: Flask (Python)
 Machine Learning: Scikit-learn
 Database: SQLite
 Email Service: Flask-Mail (SMTP Gmail)
-Others: Session management, OTP authentication
+Security: Session management + OTP authentication
 📂 Project Structure
-AiBasedOnlineFraudTrasactionDetectionSystem/
+AiBasedOnlineFraudTransactionDetectionSystem/
 │
 ├── app.py
+├── requirements.txt
+├── README.md
+├── .gitignore
+│
 ├── utils/
 │   ├── auth.py
 │   ├── database.py
 │   ├── predict.py
 │   ├── fraud_rules.py
 │   ├── analytics.py
-|   |__ preprocess.py
+│   ├── preprocess.py
 │
 ├── model/
 │   ├── train_model.py
+│   └── (ML model files stored externally)
 │
 ├── templates/
 │   ├── login.html
 │   ├── register.html
 │   ├── user_dashboard.html
 │   ├── admin_dashboard.html
-|   |__ forgot_password.html
-|   |__ index.html
-|   |__ reset_password.html
-|   |__ verify_otp.html
-|   |__ verify_reset_otp.html
 │   ├── result.html
+│   ├── forgot_password.html
+│   ├── index.html
+│   ├── reset_password.html
+│   ├── verify_otp.html
+│   ├── verify_reset_otp.html
 │
 ├── static/
 │   ├── css/
-│
-├── requirements.txt
-├── .gitignore
-└── README.md
 ⚙️ Installation & Setup
 1️⃣ Clone Repository
-git clone https://github.com/Rishika-Reddy-18/AiBasedFraudTransactionDetectionSystem.git
-cd AiBasedFraudTransactionDetectionSystem
+git clone https://github.com/Rishika-Reddy-18/AiBasedOnlineFraudTransactionDetectionSystem.git
+cd AiBasedOnlineFraudTransactionDetectionSystem
 2️⃣ Create Virtual Environment
 python -m venv venv
 
 Activate:
 
-venv\Scripts\activate   # Windows
-source venv/bin/activate  # Mac/Linux
+Windows
+
+venv\Scripts\activate
+
+Mac/Linux
+
+source venv/bin/activate
 3️⃣ Install Dependencies
 pip install -r requirements.txt
-4️⃣ Set Environment Variables
+4️⃣ Configure Environment Variables
 
-Create .env file:
+Create a .env file:
 
 MAIL_USERNAME=your_email@gmail.com
 MAIL_PASSWORD=your_app_password
 SECRET_KEY=your_secret_key
-5️⃣ Run Project
+5️⃣ Run Application
 python app.py
 
 Open in browser:
@@ -101,42 +112,45 @@ Open in browser:
 http://127.0.0.1:5000/
 🧠 Machine Learning Model
 
-The model uses supervised learning to detect fraud based on:
+The system uses a trained supervised ML model for fraud detection.
 
+Features used:
 Transaction amount
-Balance before & after transaction
+Old and new balances
 Device change
 Location change
-Output Classes:
+Output:
 0 → Safe Transaction
 1 → Fraudulent Transaction
+
+Note: The trained model files are stored externally and loaded during runtime.
+
 📊 System Flow
-User Login → Enter Transaction → ML Model Prediction + Rules
-        ↓
-   Result Display (Safe / Fraud / Suspicious)
-        ↓
-   Stored in Database
-        ↓
-   Admin Dashboard Monitoring
+
+User Login → Enter Transaction → ML Prediction + Rule Engine → Result Display → Store in Database → Admin Monitoring
+
 🔐 Security Features
-Password hidden in login/register forms
 OTP-based email verification
+Password protection in login/register
 Session-based authentication
-Environment variables for sensitive data
 Admin-only access control
+Environment variable protection for sensitive data
 📈 Future Improvements
-Deploy on cloud (AWS / Render / Railway)
-Add payment gateway simulation
-Improve ML accuracy with deep learning
-Add SMS OTP verification
+Cloud deployment (AWS / Render / Railway)
 Real-time fraud alert system
+SMS OTP authentication
+Deep learning model integration
+API-based microservice architecture
 👩‍💻 Author
 
 Rishika Reddy
+AI Based Online Fraud Transaction Detection System
+Domain: Artificial Intelligence / Machine Learning / Web Development
 
-Project: AI-Based Online Fraud Detection System
-Domain: AI Ml,AI DEVELOPER
+⭐ Support
 
-⭐ If you like this project
+If you like this project:
 
-Give a ⭐ on the repository and feel free to contribute!
+⭐ Star the repository
+🍴 Fork it
+🚀 Share it
