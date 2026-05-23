@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Dashboard</title>
+
+<style>
+body{
+    font-family:Arial;
+    background:#f2f2f2;
+    padding:20px;
+}
+
+.container{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+.top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+button{
+    padding:8px 12px;
+    margin:5px;
+    cursor:pointer;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+    margin-top:20px;
+}
+
+.card{
+    background:#007bff;
+    color:white;
+    padding:15px;
+    border-radius:8px;
+    text-align:center;
+}
+
+.section{
+    margin-top:20px;
+    padding:15px;
+    background:#fafafa;
+    border-radius:10px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th,td{
+    padding:10px;
+    border:1px solid #ddd;
+    text-align:center;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- TOP -->
+<div class="top">
+<h2>AI-Based Online Fraud Transaction Detection System</h2>
+<a href="/logout">Logout</a>
+</div>
+
+<!-- NAVIGATION -->
+<div>
+  
+    <a href="/admin_dashboard?view=users"><button>Users</button></a>
+</div>
+
+<!-- CARDS -->
+<div class="cards">
+    <div class="card">Users<br>{{ total_users }}</div>
+    <div class="card">Transactions<br>{{ total_txn }}</div>
+    <div class="card">Fraud<br>{{ fraud_count }}</div>
+    <div class="card">Safe<br>{{ safe_count }}</div>
+</div>
+
+<!-- USERS TABLE -->
+{% if view == "users" %}
+
+<div class="section">
+<h3>All Users</h3>
+
+<table>
+<tr>
+    <th>ID</th>
+    <th>Username</th>
+    <th>Email</th>
+    <th>Role</th>
+</tr>
+
+{% for user in users %}
+<tr>
+    <td>{{ user[0] }}</td>
+    <td>{{ user[1] }}</td>
+    <td>{{ user[2] }}</td>
+    <td>{{ user[4] }}</td>
+
+    <td>
+        {% if user[4] != "admin" %}
+        <a href="/delete_user/{{ user[0] }}"
+           onclick="return confirm('Are you sure you want to delete this user?')">
+           <button style="background:red;color:white;">Delete</button>
+        </a>
+        {% else %}
+            <span style="color:green;font-weight:bold;">Protected</span>
+        {% endif %}
+    </td>
+</tr>
+{% endfor %}
+
+</table>
+
+</div>
+
+{% endif %}
+
+<!-- MODEL PERFORMANCE -->
+<div class="section">
+<h3>Model Performance</h3>
+
+<p>Accuracy: {{ accuracy }}%</p>
+<p>Precision: {{ precision }}</p>
+<p>Recall: {{ recall }}</p>
+
+</div>
+
+</div>
+
+</body>
+</html>

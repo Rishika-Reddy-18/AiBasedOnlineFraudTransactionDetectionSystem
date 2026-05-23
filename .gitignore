@@ -1,0 +1,59 @@
+# =========================
+# ENVIRONMENT FILE (VERY IMPORTANT)
+# =========================
+.env
+create_admin.py
+check_users.py
+
+# =========================
+# VIRTUAL ENVIRONMENT
+# =========================
+venv/
+env/
+.venv/
+
+# =========================
+# PYTHON CACHE
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+
+# =========================
+# DATABASE FILES (SENSITIVE)
+# =========================
+*.db
+fraud.db
+users.db
+*.sqlite3
+
+# =========================
+# MACHINE LEARNING FILES (OPTIONAL EXCLUDE)
+# =========================
+model/*.pkl
+*.pkl
+*.joblib
+model/*.csv
+
+# =========================
+# LOG FILES
+# =========================
+*.log
+
+# =========================
+# IDE FILES
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# OS FILES
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# TEMP / UPLOAD FILES
+# =========================
+uploads/
+temp/
