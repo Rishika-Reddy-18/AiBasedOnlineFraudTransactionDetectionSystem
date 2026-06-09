@@ -30,9 +30,7 @@ users.db
 # =========================
 # MACHINE LEARNING FILES (OPTIONAL EXCLUDE)
 # =========================
-model/*.pkl
-*.pkl
-*.joblib
+
 model/*.csv
 
 # =========================
